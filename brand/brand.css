@@ -1,0 +1,56 @@
+/* GURFAT Brand Kit (Bahrain • Hybrid Tech x Luxury) */
+/* Drop this into your site and customize as needed */
+
+:root{
+  /* Primary */
+  --gurfat-navy: #0B1F3B;
+  --gurfat-navy-2:#102A52;
+
+  /* Neutrals */
+  --gurfat-ink:  #0F172A;
+  --gurfat-text: #1A2433;
+  --gurfat-muted:#5B6B82;
+
+  /* Surfaces */
+  --gurfat-white:#FFFFFF;
+  --gurfat-soft: #F4F7FB;
+  --gurfat-line: #E6EDF6;
+
+  /* Optional Bahrain accent (use sparingly) */
+  --gurfat-bahrain-red:#CE1126;
+
+  /* Optional luxury accent (use sparingly; not for buttons) */
+  --gurfat-gold:#C9A227;
+
+  /* Shape & shadow */
+  --gurfat-radius: 18px;
+  --gurfat-radius-sm: 14px;
+  --gurfat-shadow: 0 12px 30px rgba(11,31,59,.10);
+}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 18px;border-radius:var(--gurfat-radius-sm);
+  border:1px solid transparent;font-weight:600;cursor:pointer;
+  transition:.15s transform,.15s background,.15s border-color;
+}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--gurfat-navy);color:#fff}
+.btn-primary:hover{background:var(--gurfat-navy-2)}
+.btn-secondary{background:var(--gurfat-white);border-color:var(--gurfat-line);color:var(--gurfat-ink)}
+.btn-secondary:hover{background:var(--gurfat-soft)}
+
+/* Cards */
+.card{
+  background:var(--gurfat-white);
+  border:1px solid var(--gurfat-line);
+  border-radius:var(--gurfat-radius);
+  box-shadow:var(--gurfat-shadow);
+}
+
+/* Luxury CTA section */
+.gurfat-cta{
+  background: linear-gradient(135deg,var(--gurfat-navy),var(--gurfat-navy-2));
+  color:#fff;
+}
