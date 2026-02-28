@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Gurfat | Listings</title>
+  <link rel="icon" href="./assets/favicon.ico">
+  <link rel="stylesheet" href="./brand/brand.css">
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="./index.html">
+      <img src="./assets/gurfat-logo-navy.png" alt="Gurfat">
+    </a>
+    <nav class="nav-links">
+      <a href="./index.html">Home</a>
+      <a class="active" href="./listings.html">Listings</a>
+      <a href="./destinations.html">Destinations</a>
+      <a href="./landlords.html">List Property</a>
+      <a href="./contact.html">Contact</a>
+      <a class="btn btn-primary" href="./landlords.html">List Property</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Listings</h1>
+    <p>Browse sample listings (static). Filtering works client-side. Replace with your real inventory later.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="toolbar">
+      <input id="q" class="input" style="max-width:320px" placeholder="Search (e.g., Marassi, Bahrain Bay)" />
+      <select id="loc" style="max-width:260px">
+        <option>Any</option>
+        <option>Seef District</option>
+        <option>Bahrain Bay</option>
+        <option>Marassi Al Bahrain</option>
+        <option>Juffair</option>
+        <option>Amwaj Island</option>
+      </select>
+      <select id="beds" style="max-width:220px">
+        <option>Any</option>
+        <option>Studio</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3+</option>
+      </select>
+      <button class="btn btn-secondary" type="button" onclick="document.getElementById('q').value='';document.getElementById('loc').value='Any';document.getElementById('beds').value='Any';filterListings();">Reset</button>
+    </div>
+
+    <div class="grid">
+      <article class="card listing-card" data-listing
+        data-title="2BR Bahrain Bay Luxury"
+        data-location="Bahrain Bay"
+        data-bedrooms="2">
+        <div class="listing-img"></div>
+        <div class="card-pad">
+          <h3 style="margin:0">2BR | Bahrain Bay | Luxury</h3>
+          <div class="small">Manama • Bahrain Bay</div>
+          <div style="margin-top:10px"><span class="money">75 BD</span> <span class="small">/ night</span></div>
+        </div>
+      </article>
+
+      <article class="card listing-card" data-listing
+        data-title="Marassi 1BR Beach Access"
+        data-location="Marassi Al Bahrain"
+        data-bedrooms="1">
+        <div class="listing-img"></div>
+        <div class="card-pad">
+          <h3 style="margin:0">Marassi Vista | 1BR | Beach Access</h3>
+          <div class="small">Marassi • Muharraq</div>
+          <div style="margin-top:10px"><span class="money">60 BD</span> <span class="small">/ night</span></div>
+        </div>
+      </article>
+
+      <article class="card listing-card" data-listing
+        data-title="Studio Bahrain Bay Chic"
+        data-location="Bahrain Bay"
+        data-bedrooms="Studio">
+        <div class="listing-img"></div>
+        <div class="card-pad">
+          <h3 style="margin:0">Chic Studio | Bahrain Bay</h3>
+          <div class="small">Manama • Bahrain Bay</div>
+          <div style="margin-top:10px"><span class="money">28 BD</span> <span class="small">/ night</span></div>
+        </div>
+      </article>
+
+      <article class="card listing-card" data-listing
+        data-title="Seef 2BR City View"
+        data-location="Seef District"
+        data-bedrooms="2">
+        <div class="listing-img"></div>
+        <div class="card-pad">
+          <h3 style="margin:0">2BR | Seef | City View</h3>
+          <div class="small">Seef District • Manama</div>
+          <div style="margin-top:10px"><span class="money">55 BD</span> <span class="small">/ night</span></div>
+        </div>
+      </article>
+
+      <article class="card listing-card" data-listing
+        data-title="Amwaj 3BR Sea View"
+        data-location="Amwaj Island"
+        data-bedrooms="3+">
+        <div class="listing-img"></div>
+        <div class="card-pad">
+          <h3 style="margin:0">3BR+ | Amwaj | Sea View</h3>
+          <div class="small">Amwaj Island • Muharraq</div>
+          <div style="margin-top:10px"><span class="money">95 BD</span> <span class="small">/ night</span></div>
+        </div>
+      </article>
+
+      <article class="card listing-card" data-listing
+        data-title="Juffair 1BR Walkable"
+        data-location="Juffair"
+        data-bedrooms="1">
+        <div class="listing-img"></div>
+        <div class="card-pad">
+          <h3 style="margin:0">1BR | Juffair | Walkable</h3>
+          <div class="small">Juffair • Manama</div>
+          <div style="margin-top:10px"><span class="money">40 BD</span> <span class="small">/ night</span></div>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container row">
+    <div>© <span id="year"></span> Gurfat. Bahrain.</div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <a href="./contact.html">Support</a>
+      <a href="./landlords.html">List Property</a>
+    </div>
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>
