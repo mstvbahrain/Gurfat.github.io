@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Gurfat | List Property</title>
+  <link rel="icon" href="./assets/favicon.ico">
+  <link rel="stylesheet" href="./brand/brand.css">
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="./index.html">
+      <img src="./assets/gurfat-logo-navy.png" alt="Gurfat">
+    </a>
+    <nav class="nav-links">
+      <a href="./index.html">Home</a>
+      <a href="./listings.html">Listings</a>
+      <a href="./destinations.html">Destinations</a>
+      <a class="active" href="./landlords.html">List Property</a>
+      <a href="./contact.html">Contact</a>
+      <a class="btn btn-primary" href="./landlords.html">List Property</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>List Your Property</h1>
+    <p>Send your details and we’ll contact you with a management proposal.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card">
+      <div class="card-pad">
+        <form action="https://formsubmit.co/YOUR_EMAIL@DOMAIN.COM" method="POST">
+          <!-- FormSubmit settings -->
+          <input type="hidden" name="_subject" value="New Property Lead - Gurfat">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <!-- Redirect after submit (optional) -->
+          <input type="hidden" name="_next" value="https://YOUR_GITHUB_PAGES_URL/thank-you.html">
+
+          <div class="form-grid">
+            <div>
+              <label class="small">Full Name</label>
+              <input class="input" name="name" required placeholder="Your name">
+            </div>
+            <div>
+              <label class="small">Phone / WhatsApp</label>
+              <input class="input" name="phone" required placeholder="+973 ...">
+            </div>
+            <div>
+              <label class="small">Email</label>
+              <input class="input" name="email" type="email" required placeholder="you@email.com">
+            </div>
+            <div>
+              <label class="small">Property Location</label>
+              <select name="location" required>
+                <option>Seef District</option>
+                <option>Bahrain Bay</option>
+                <option>Marassi Al Bahrain</option>
+                <option>Juffair</option>
+                <option>Amwaj Island</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="small">Bedrooms</label>
+              <select name="bedrooms" required>
+                <option>Studio</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3+</option>
+              </select>
+            </div>
+            <div>
+              <label class="small">Property Type</label>
+              <select name="type" required>
+                <option>Apartment</option>
+                <option>Villa</option>
+                <option>Townhouse</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <label class="small">Notes</label>
+            <textarea name="notes" rows="5" placeholder="Tell us anything important (furnished? view? availability?)"></textarea>
+          </div>
+
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn btn-primary" type="submit">Submit Property</button>
+            <a class="btn btn-secondary" href="./contact.html">Contact Us</a>
+          </div>
+
+          <p class="small" style="margin-top:12px">
+            After you submit, FormSubmit will ask you to confirm your email once (to prevent spam).
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container row">
+    <div>© <span id="year"></span> Gurfat. Bahrain.</div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <a href="./contact.html">Support</a>
+      <a href="./listings.html">Listings</a>
+    </div>
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>
